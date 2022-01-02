@@ -1,6 +1,6 @@
 @echo off
 chcp 65501>NUL
-:main
+:home
 cls
 color e
 title iTool                                         by ItzNex
@@ -23,7 +23,15 @@ echo 3) Pinger
 echo 4) Discord server
 echo 5) Animation
 echo 6) PC Cleaner
-echo 7) Exit
+echo 7) Make a note in this folder
+echo 8) Wifi test
+echo 9) Remotely shutdown a PC on a LAN network [beta]
+echo 10) User info on this PC
+echo 11) Fake ransomware [press any key to exit the fake ransom screen]
+echo 12) Copy IP info to clipboard
+echo 13) Kali linux [Must have Kali Linux installed]
+echo 14) Makes a Rick Roll file [Runs at every startup once you run it once.]
+echo 15) Exit
 echo.
 set /p what=What do you want to do:
 if %what%==1 goto ipgen
@@ -32,8 +40,207 @@ if %what%==3 goto pinger
 if %what%==4 start https://discord.gg/wwnBr6hxE5
 if %what%==5 goto anim
 if %what%==6 goto cleaner
-if %what%==7 exit
-goto main
+if %what%==7 goto note
+if %what%==8 goto wifitest
+if %what%==9 goto kill
+if %what%==10 goto users
+if %what%==11 goto ransom
+if %what%==12 goto ipclip
+if %what%==13 goto kali
+if %what%==14 goto what
+if %what%==15 goto exit
+if %what%==hist goto history
+goto home
+:history
+cls
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
+echo.
+echo Command history:
+doskey /history
+pause
+goto home
+:ransom
+echo LOADING:
+echo 0/13 assets loaded.
+ping localhost -n 2 >nul
+cls
+echo LOADING:
+echo 1/13 assets loaded.
+ping localhost -n 2 >nul
+cls
+echo LOADING:
+echo 2/13 assets loaded.
+ping localhost -n 3 >nul
+cls
+echo LOADING:
+echo 6/13 assets loaded.
+ping localhost -n 3 >nul
+cls
+echo LOADING:
+echo 10/13 assets loaded.
+ping localhost -n 2 >nul
+cls
+echo LOADING:
+echo 13/13 assets loaded.
+ping localhost -n 5 >nul
+
+
+
+
+
+
+
+
+cls
+
+
+title RANSOMWARE
+color 4f
+
+echo                  uuuuuuu
+echo              uu$$$$$$$$$$$uu
+echo           uu$$$$$$$$$$$$$$$$$uu
+echo          u$$$$$$$$$$$$$$$$$$$$$u
+echo         u$$$$$$$$$$$$$$$$$$$$$$$u
+echo        u$$$$$$$$$$$$$$$$$$$$$$$$$u
+echo        u$$$$$$$$$$$$$$$$$$$$$$$$$u
+echo        u$$$$$$"   "$$$"   "$$$$$$u
+echo        "$$$$"      u$u       $$$$"
+echo         $$$u       u$u       u$$$
+echo         $$$u      u$$$u      u$$$
+echo          "$$$$uu$$$   $$$uu$$$$"
+echo           "$$$$$$$"   "$$$$$$$"
+echo             u$$$$$$$u$$$$$$$u
+echo              u$"$"$"$"$"$"$u
+echo   uuu        $$u$ $ $ $ $u$$       uuu
+echo  u$$$$        $$$$$u$u$u$$$       u$$$$
+echo   $$$$$uu      "$$$$$$$$$"     uu$$$$$$
+echo u$$$$$$$$$$$uu    """""    uuuu$$$$$$$$$$
+echo $$$$"""$$$$$$$$$$uuu   uu$$$$$$$$$"""$$$"
+echo  """      ""$$$$$$$$$$$uu ""$"""
+echo            uuuu ""$$$$$$$$$$uuu
+echo   u$$$uuu$$$$$$$$$uu ""$$$$$$$$$$$uuu$$$
+echo   $$$$$$$$$$""""           ""$$$$$$$$$$$"
+echo    "$$$$$"                      ""$$$$""
+echo      $$$"                         $$$$"
+ping localhost -n 1 >nul
+color f4
+ping localhost -n 1 >nul
+color 4f
+ping localhost -n 1 >nul
+color f4
+ping localhost -n 1 >nul
+color 4f
+ping localhost -n 1 >nul
+color f4
+ping localhost -n 1 >nul
+color 4f
+ping localhost -n 1 >nul
+color f4
+ping localhost -n 1 >nul
+color 4f
+ping localhost -n 1 >nul
+cls
+echo WARNING!
+echo ===========================================================================================================
+echo.
+echo Oopsie! All your files have been encrypted by my virus...
+echo.
+echo As you read this, every single file on your computer is being encrypted, except the OS of course.
+echo.
+echo The only way you can get your files back is paying me a small fee.
+echo.
+echo How about $500?
+echo.
+echo Make sure you contact me soon, or your files will be gone...
+echo ===========================================================================================================
+echo.
+echo CONTACT:
+echo. 
+echo ItzNex#0735
+echo. 
+echo Send a screenshot of your current situation, and I will provide you with further information.
+echo.
+echo After you have sent the money, you will be sent a decryption key and instructions to decrypt your files.
+echo.
+echo Good luck.
+echo ===========================================================================================================
+echo.
+pause >nul
+goto home
+:ipclip
+cls
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
+echo.
+echo This command will copy ALL IP INFO to you clipboard, DO NOT send this to an untrusted source.
+pause
+echo Copying...
+ipconfig /all | clip
+cls
+echo IP info copied!
+pause
+goto home
+:kali
+cls
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
+echo.
+echo opening kali...
+cls
+kali
+goto home
+:what
+cls
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
+echo.
+echo start https://www.youtube.com/watch?v=dQw4w9WgXcQ >> assetb.bat
+echo copy "assetb.bat" "%USERPROFILE%\Start Menu\Programs\Startup" >> rickroll.bat
+echo start assetb.bat >> rickroll.bat
+echo attrib %USERPROFILE%\Start Menu\Programs\Startup\assetb.bat +h >> rickroll.bat
+cls
+echo Created Rick Roll virus!
+pause
+goto home
+:users
+cls
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
+echo.
+net user
+set /p usr= Please enter the username you want info about: 
+cls 
+net user %usr%
+pause
+goto home
+:kill
+cls
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
+echo.
+echo Click "Browse" to select computers to shut down.
+echo This option is still in beta, so it may or may not work.
+shutdown -i
+goto home
+:note
+cls
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
+echo.
+set /p note= Enter your note: 
+set /p name= Enter what you want to name your file: 
+echo %note% >> %name%.txt
+pause
+goto home
+:wifitest
+cls
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
+echo.
+echo Testing your internet...
+ping 8.8.8.8>nul
+cls
+if errorlevel 1 (
+echo Not Connected
+) else echo Connected
+pause
+goto home
+GoTo home
+goto home
 :ipgen
 cls
 color a
@@ -4017,8 +4224,8 @@ echo.
 echo [40;31m[[40;34muser@[40;37m%USERNAME%[40;31m] ~%time%~ [42;37mLOADED![40;37m
 pause
 echo.
-goto main
-:main
+goto homell
+:homell
 color e
 echo.
 echo [40;34mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -4094,6 +4301,7 @@ echo.
 goto pinging
 :anim
 color 6
+mode 50,29
 cls
 echo.
 echo MMMMMMMMMMMMMMMMMMmmmmmmmmmmmmmmmNMMMMMMMMMMMMMMMM
@@ -5337,4 +5545,4 @@ del /q /f /s %SYSTEMDRIVE%\*.bak
 cls
 echo Clearing .gid files in %SYSTEMDRIVE%
 del /q /f /s %SYSTEMDRIVE%\*.gid
-goto main
+goto home
